@@ -1,0 +1,389 @@
+:root{
+    --cor-menu:#EDEDED;
+    --darkBackground: #c9a379;
+    --main: #edbe8a;
+    --cor-principal:#FAF1E6;
+    --menu-font-family: "Montserrat-Regular";
+    --title-font-family: "Montserrat-Light";
+    --name-font-family: "Montserrat-Bold";
+    --transparentBackground: rgba(0,0,0,0); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--cor-principal);
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+a:hover{
+    color: var(--main);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+} 
+
+.logo img{
+    max-height: 12vh;
+}
+
+.logo-icone{
+    display: flex;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--cor-principal);
+    height: 8vh;
+    border: 1px solid var(--main);
+}
+
+.icone-aliança{
+    max-width: 70px;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-navbar{
+    cursor: pointer;
+    display: none;
+}
+ 
+.mobile-navbar div{
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+/*Navegação menu*/
+
+@media (max-width:1200px){
+
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: var(--cor-menu);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+        color: black;
+        cursor: pointer;
+    }
+
+    .nav-list li:hover{
+        margin-left: 0;
+        color: var(--cor-principal);
+    }
+    .mobile-navbar{
+        display: block;
+    }
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-navbar.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-navbar.active .line2{
+    opacity: 0;
+}
+
+
+.mobile-navbar.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*Main*/
+
+main{
+    width: 1000px;
+    overflow: hidden;
+    padding-top: 55px;
+    margin: 0;
+}
+
+img.banner{
+    width: 100%;
+    height: auto;
+    display: inline;
+}
+.container{
+   margin:0 auto;
+}
+/*Cronometro*/
+
+#contador {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+#contador li {
+    background-color: var(--gray-800);
+    border-radius: 15px;
+    color: var(--green-500);
+    font-size: 42px;
+    font-weight: bold;
+    height: 60px;
+    padding: 8px 12px;
+    text-align: center;
+    width: 50px;
+}
+
+.cronometro{
+    background-color: var(--cor-principal);
+    border-bottom: 1px dotted #edbe8a ;
+    padding: 30px;
+    margin-top: 20px;
+}
+.card-cronometo{
+    background-color: var(--main);
+    overflow: hidden;
+    padding: 15px;
+    border-radius: 10%;
+}
+.card-cronometo:first-child{
+    padding-right: 35px;
+}
+.cronometro h4{
+    text-align: center;
+    margin: 1rem;
+    padding-top: -200px;
+}
+
+.lista-cronometro{
+    display: flex; 
+    justify-content:space-evenly;
+    padding: 1rem;
+    margin: 1rem; 
+}
+.card-cronometo p{
+    display: flex;
+    justify-content: center;  
+    font-weight: 700;    
+}
+
+.card{
+    max-width: 4rem;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10%;
+}
+
+.card p{
+    font-weight: 700;
+    background-color: #edbe8a;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.card h4{
+    font-size: 1.5rem;
+}
+
+/*Sobre*/
+
+.sobre{
+    padding-bottom: 55px;
+    text-align: center;
+    background-color: var(--cor-principal);
+}
+
+.sobre h3{
+    padding: 30px;
+}
+
+.bem-vindo{
+    text-align: center;
+    padding:100px;
+    background: var(--cor-principal);
+    
+}
+
+.bem-vindo h3{
+    padding-bottom:30px;
+}
+
+
+.cards-fotos{
+    display: flex;
+    justify-content:space-between;
+    overflow: hidden;
+}
+
+.card-foto img{
+    max-width: 250px;
+    min-height: 200px;
+}
+
+.card-foto img:hover{
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.botao-ver-mais{
+    text-align: center;
+    padding: 50px;
+}
+
+.botao-ver-mais a{
+    border: 1px solid var(--main);
+    padding: 15px 30px;
+}
+
+.versiculo{
+    padding: 50px -150px; 
+
+}
+
+.versiculo p{
+    border: 1px dashed var(--main);
+    padding: 50px;   
+}
+
+
+/*Pdrinhos*/
+
+.padrinhos{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 120px;
+}
+
+.padrinhos h3{
+   padding-bottom: 30px;
+}
+
+.lista-padrinhos{
+   display: flex;
+   justify-content: space-between
+}
+
+.imagem-padrinhos{
+    background-color: var(--main);
+    border-radius: 100%;
+    padding: 30px;
+}
+.titulos-padrinhos{
+    padding-top: 20px;
+}
+
+.card-padrinhos img{
+   max-width: 60px;
+   min-width: 60px;
+   max-height: 60px;
+   align-items: center;
+   padding: 0;
+}
+
+
+/*Localização*/
+
+.icone__localizacao{
+    text-align: center;
+    padding-bottom:  25px;
+}
+
+.localização__lounge{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--main);
+}
+
+.card__localização{
+    background-color: var(--main);
+    padding: 20px 50px;
+}
+
+.icones__redes__sociais{
+    display: flex;
+    justify-content: start;
+    padding-top: 20px;
+}
+
+.icones__redes__sociais a {
+    padding-right: 10px;
+}
+/*Footer*/
+
+footer{
+    background-color: var(--cor-principal);
+    border-top: 1px solid var(--main);
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: 700;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
