@@ -18,8 +18,10 @@
 body{
     font-family: 'Montserrat', sans-serif;
     width: 100%;
+    height:100vh;
     -webkit-font-smoothing: antialiased;
     background-color: var(--cor-principal);
+    justify-content: center;
 }
 
 header{
@@ -328,7 +330,7 @@ footer p{
 
     .nav-list li:hover{
         margin-left: 0;
-        color: var(--cor-principal);
+        color: var(--main);
     }
     .mobile-navbar{
         display: block;

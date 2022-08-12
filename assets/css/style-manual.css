@@ -1,0 +1,19 @@
+img.imagem-manual{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: inline;
+}
+main{
+    width: 1400px;
+}
+
+@media(max-width:999px){
+    main{
+        width: 400px;
+    }
+
+    .imagem-manual img{
+        width: 400px;
+    }
+}
