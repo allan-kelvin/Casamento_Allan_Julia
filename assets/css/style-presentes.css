@@ -8,7 +8,25 @@
     --name-font-family: "Montserrat-Bold";
     --transparentBackground: rgba(0,0,0,0); 
 }
+.informacoes{
+    padding: 40px;
+    margin: 60px 30px;
+    border: 1px dashed var(--main) ;
+}
 
+.informacoes h1{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.informacoes ul li{
+    font-weight: 600;
+    padding: 0.5rem;
+}
+.icone-informacoes{
+    text-align: center;
+    padding-bottom: 20px;
+}
 .cards-presentes{
     display: flex;
     justify-content:space-between;

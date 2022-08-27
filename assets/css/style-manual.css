@@ -10,10 +10,10 @@ main{
 
 @media(max-width:999px){
     main{
-        width: 400px;
+        height:100%;
+        width: 420px;
     }
-
-    .imagem-manual img{
-        width: 400px;
+    img.imagem-manual{
+        height: 800px;
     }
 }
