@@ -1,0 +1,19 @@
+.casamento__titulo{
+    padding: 30px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.casamento__img-principal >img{
+    width: 100%;
+}
+
+.casamento__card-eventos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-lounge>img{
+    max-width: 300px;
+    height: 100%;
+}
