@@ -11,9 +11,33 @@
 .casamento__card-eventos{
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 
-.card-lounge>img{
+.card-lounge img{
     max-width: 300px;
     height: 100%;
+    opacity: 0.7;
+}
+
+.sessao2> img{
+    width: 350px;
+    height: 350px;
+}
+
+.card-lounge>img:hover{
+    cursor: pointer;
+    opacity: 1.0;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+.card-lounge>img:active{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@media (max-width:999px){
+    .casamento__card-eventos{
+        display: block;
+    }
 }
