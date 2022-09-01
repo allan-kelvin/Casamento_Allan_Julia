@@ -91,6 +91,7 @@
 @media (max-width:999px){
     .cards-presentes{
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
